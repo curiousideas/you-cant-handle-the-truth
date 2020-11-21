@@ -60,6 +60,7 @@ public class HandleTruthTest {
         String msg = "        1           4              4";
 
         assertEquals("[2, 1]", HandleTruth.wordCount(msg).keySet().toString());
+        System.out.println(HandleTruth.wordCount(msg).values());
         assertEquals("[[4], [1]]", HandleTruth.wordCount(msg).values().toString());
     }
 
