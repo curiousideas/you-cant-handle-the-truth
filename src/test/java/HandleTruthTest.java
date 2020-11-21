@@ -28,16 +28,25 @@ public class HandleTruthTest {
         assertTrue(HandleTruth.wordCount(msg).containsKey(1));
 
         // Checks keys that shouldn't exist don't exist
-        assertFalse(HandleTruth.wordCount(msg).containsKey(12));
-
-        System.out.println(HandleTruth.wordCount(msg).values());
-
-
+        assertFalse(HandleTruth.wordCount(msg).containsKey(4));
+        assertFalse(HandleTruth.wordCount(msg).containsKey(7));
+        for (int i = 10; i < 18; i++) {
+            assertFalse(HandleTruth.wordCount(msg).containsKey(i));
+        }
+        assertFalse(HandleTruth.wordCount(msg).containsKey(19));
+        assertFalse(HandleTruth.wordCount(msg).containsKey(-3));
     }
 
     @Test
     public void test2() {
+        String msg = "hi hi mango coconut car hi hi";
+        // Verify size is correct
+        assertTrue(HandleTruth.wordCount(msg).size() == 2);
+        assertFalse(HandleTruth.wordCount(msg).size() == -1);
+        assertFalse(HandleTruth.wordCount(msg).size() == 2.1);
 
+        String msg2 = "hi hi hi hi hi hi hi hi hi hi hi hi man . .";
+        assertTrue(HandleTruth.wordCount(msg2).size() == 3);
     }
 
     @Test
