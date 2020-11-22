@@ -3,7 +3,7 @@ import java.util.*;
 public class HandleTruth {
     public static TreeMap<Integer, Set<String>> wordCount(String msg) {
 
-        msg =  msg.trim(); // Bug Fix
+        msg = msg.trim(); // Bug Fix
 
         // Bug Fix
         if (msg.length() == 0) {
