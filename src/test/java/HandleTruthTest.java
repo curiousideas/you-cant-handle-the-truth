@@ -28,10 +28,7 @@ public class HandleTruthTest {
     @Test
     public void test2() {
         String msg = "hi hi mango coconut car hi hi";
-
         assertTrue(HandleTruth.wordCount(msg).size() == 2);
-        assertFalse(HandleTruth.wordCount(msg).size() == -1);
-        assertFalse(HandleTruth.wordCount(msg).size() == 2.1);
 
         String msg2 = "hi hi hi hi hi hi hi hi hi hi hi hi man . .";
         assertTrue(HandleTruth.wordCount(msg2).size() == 3);
@@ -44,6 +41,7 @@ public class HandleTruthTest {
     @Test
     public void test3() {
         String msg = ". hot egg quail man man good band hot , . sauce ( ( ( ( ) ) )";
+        // make set and compare
         assertEquals("[[(], [)], [man, hot, .], [egg, band, sauce, ,, good, quail]]", HandleTruth.wordCount(msg).values().toString());
     }
 
