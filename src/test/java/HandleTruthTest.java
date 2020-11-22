@@ -58,6 +58,7 @@ public class HandleTruthTest {
         assertEquals("[[4], [1]]", HandleTruth.wordCount(msg).values().toString());
     }
 
+    // BUG - Line 9 in HandleTruth fixes this bug
     @Test
     public void test5() {
         String msg = "";
@@ -102,6 +103,7 @@ public class HandleTruthTest {
         assertEquals("[[a, b, c]]", HandleTruth.wordCount(msg).values().toString());
     }
 
+    // BUG - Line 7 in HandleTruth fixes this bug
     @Test
     public void test11() {
         String msg = " a";
