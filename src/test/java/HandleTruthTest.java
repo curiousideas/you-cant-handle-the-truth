@@ -41,7 +41,6 @@ public class HandleTruthTest {
     @Test
     public void test3() {
         String msg = ". hot egg quail man man good band hot , . sauce ( ( ( ( ) ) )";
-        // make set and compare
         assertEquals("[[(], [)], [man, hot, .], [egg, band, sauce, ,, good, quail]]", HandleTruth.wordCount(msg).values().toString());
     }
 
